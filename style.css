@@ -1,0 +1,107 @@
+/* body {
+    margin: auto;
+    text-align: center;
+    width: 80%;
+}
+
+div.yhContainer {
+    margin: 25px;
+}
+
+div.main-container {
+    display: flex;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  main {
+    width: 80%;
+    margin: 15px auto 0;
+  }
+  
+  #yhForm input[name="name"] {
+    grid-area: name;
+  }
+  
+  #yhForm input[name="age"] {
+    grid-area: age;
+  }
+  
+  #yhForm input[name="roll"] {
+    grid-area: roll;
+  }
+  
+  #yhForm button {
+    grid-area: button;
+  }
+  
+  #yhForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "name name"
+      "age roll"
+      "button button";
+  }
+  
+  #yhForm * {
+    margin: 7px;
+    padding: 7px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  #yhForm button {
+    outline: none;
+    background-color: #6495ed;
+    color: white;
+    border: 5px solid transparent;
+    cursor: pointer;
+  }
+  
+  #yhForm input {
+    border: 3px solid #6495ed;
+    outline: none;
+  }
+  
+  #yhForm input:focus {
+    border: 3px solid #367bfa;
+  }
+  
+  #yhForm button:active {
+    border-color: #367bfa;
+  }
+  
+  #yhContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid gray;
+    background-color: #ebebeb;
+    color: #2f2f2f;
+    border-radius: 15px;
+  }
+  
+  #yhContainer div {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #yhContainer div * {
+    margin: 5px;
+  }
+  
