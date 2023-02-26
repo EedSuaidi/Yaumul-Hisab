@@ -36,11 +36,7 @@ const createYHElement = ({ nama, pahala, dosa, hasil }) => {
     // Tambah ke DOM
     YHdiv.append(YHnama, YHpahala, YHdosa, YHhasil)
     yhContainer.appendChild(YHdiv)
-
-    yhContainer.style.display = yh.legth === 0 ? "none" : "flex"
 }
-
-yhContainer.style.display = yh.legth === 0 ? "none" : "flex"
 
 yh.forEach(createYHElement)
 
@@ -55,12 +51,14 @@ yhForm.onsubmit = e => {
         hasil = "Sangat Mukmin Sekali Banget"
     } else if ( vpahala / vdosa >= 3 ) {
         hasil = "Mukmin"
+    } else if ( vpahala / vdosa > 1 ) {
+        hasil = "Semi Mukmin"
     } else if ( vpahala == vdosa ) {
         hasil = "Netral"
-    } else if ( vpahala / vdosa >= 0.34 ) {
+    } else if ( vpahala / vdosa >= 0.3 ) {
         hasil = "Semi Kafir"
     } else if ( vpahala / vdosa >= 0.1 || vpahala / vdosa < 0.1 ) {
-        hasil = "Pure Kafir Laknatullah"
+        hasil = "Iblis Murni"
     }
 
     const newYH = addYH(
